@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private bool isGrounded;
 
+    //starts on start
     void Start()
     {
         rb = GetComponent<Rigidbody>();
