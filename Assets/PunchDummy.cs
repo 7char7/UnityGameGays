@@ -17,7 +17,7 @@ public class PunchDummy : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Keep bottom planted
+        // Keep bottom planted hih
         Vector3 pos = rb.position;
         pos.y = 1f; // height of capsule bottom
         rb.position = pos;
