@@ -17,7 +17,7 @@ public class PunchingPlayer : MonoBehaviour
     [Header("Punch Settings")]
     public float punchForce = 20f;           // Default: 20
     public float maxVelocity = 20f;          // Default: 20
-
+    //hi
     void Start()
     {
         leftFist.useGravity = false;
