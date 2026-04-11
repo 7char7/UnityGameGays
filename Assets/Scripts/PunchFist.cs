@@ -4,7 +4,7 @@ public class PunchFist : MonoBehaviour
 {
     [Header("References")]
     public Transform playerCamera;
-    public Transform playerRoot; // 👈 NEW (the object that rotates)
+    public Transform playerRoot; // For players rotation
     public Rigidbody rb;
 
     [Header("Arm Target (move in scene)")]
@@ -22,7 +22,7 @@ public class PunchFist : MonoBehaviour
 
     [Header("Curve")]
     public float curveStrength = 20f;
-    public float rotationInfluence = 2f; // 🔥 how much turning affects curve
+    public float rotationInfluence = 2f; //  how much turning affects curve
 
     private bool isPunching;
     private float punchTimer;
@@ -50,7 +50,7 @@ public class PunchFist : MonoBehaviour
         ApplyCurve();
     }
 
-    // 🔥 Track how fast the player is turning
+    // Track how fast the player is turning
     private void TrackRotation()
     {
         float currentYaw = playerRoot.eulerAngles.y;
@@ -103,7 +103,7 @@ public class PunchFist : MonoBehaviour
             return;
         }
 
-        // 🔥 Use player rotation instead of mouse input
+        // Use player rotation instead of mouse input
         float turn = yawVelocity * rotationInfluence;
 
         // Clamp so it doesn’t explode
